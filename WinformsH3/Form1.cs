@@ -27,6 +27,9 @@ namespace WinformsH3
             };
 
 
+            lblGasStationPayment.Text = "0$";
+            foreach (var txt in panelGasPayment.Controls.OfType<TextBox>())
+                txt.Text = string.Empty;
 
         }
 
@@ -57,9 +60,15 @@ namespace WinformsH3
         private void txtGasStation_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty((sender as TextBox)!.Text))
-            {
-                (sender as TextBox)!.Text = string.Empty;
                 return;
+
+            if (string.IsNullOrWhiteSpace(combobGasType.Text))
+            {
+                if ((sender as TextBox)!.Text == 0.ToString())
+                    return;
+
+                MessageBoxCustom("Please Choose Gas Type First");
+                (sender as TextBox)!.Text = 0.ToString();
             }
 
             if (!Regex.Match((sender as TextBox)?.Text!, @"^([0-9]+([,][0-9]*)?|[,][0-9]+)$").Success)
@@ -69,14 +78,6 @@ namespace WinformsH3
                 MessageBoxCustom("Only numbers allowed");
                 return;
             }
-
-            if (string.IsNullOrWhiteSpace(combobGasType.Text))
-            {
-                MessageBoxCustom("Please Choose Gas Type First");
-                (sender as TextBox)!.Text = 0.ToString() + "$";
-                return;
-            }
-
 
             if (rbByPrice.Checked)
                 gasStationPayment = double.Parse((sender as TextBox)!.Text);
@@ -110,10 +111,7 @@ namespace WinformsH3
         private void txtMiniCafe_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty((sender as TextBox)!.Text))
-            {
-
                 return;
-            }
 
             if (!Regex.Match((sender as TextBox)?.Text!, @"^(0|[1-9][0-9]*)$").Success)
             {
@@ -122,15 +120,28 @@ namespace WinformsH3
                 return;
             }
 
-            int amount = int.Parse((sender as TextBox)?.Text!);
 
-            if (string.IsNullOrEmpty((sender as TextBox)?.Text!))
+
+            double sum = 0;
+            double price;
+            int amount;
+
+            foreach (var panel in gbMiniCafe.Controls.OfType<Panel>())
+            {
+                price = 0;
                 amount = 0;
+                foreach (var control in panel.Controls)
+                {
+                    if (control is Label l)
+                        price = double.Parse(l.Text);
+                    if (control is TextBox t && !string.IsNullOrEmpty(t.Text))
+                        amount = int.Parse(t.Text);
+                }
 
+                sum += amount * price;
+            }
 
-            foreach (var control in (sender as TextBox)!.Parent.Controls.OfType<Label>())
-                miniCafePayment += amount * double.Parse(control.Text);
-
+            miniCafePayment = sum;
 
             lblMiniCafePayment.Text = miniCafePayment.ToString() + '$';
 
@@ -145,10 +156,8 @@ namespace WinformsH3
                 return;
             }
 
-            MessageBoxCustom(@$"Your Payment Is:{lblTotalAmount.Text}
+            MessageBoxCustom(@$"Your Payment Is: {lblTotalAmount.Text}
 Thanks For Choosing Us!");
-
-            MessageBox.Show(Controls.Count.ToString());
 
             foreach (var gb in Controls.OfType<GroupBox>())
             {

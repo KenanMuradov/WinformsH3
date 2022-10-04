@@ -49,19 +49,19 @@
             this.lblPAmount = new System.Windows.Forms.Label();
             this.lblPPrice = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelSnickers = new System.Windows.Forms.Panel();
             this.txtSnickers = new System.Windows.Forms.TextBox();
             this.lblSnickers = new System.Windows.Forms.Label();
             this.checkBoxSnickers = new System.Windows.Forms.CheckBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelCofe = new System.Windows.Forms.Panel();
             this.lblCofe = new System.Windows.Forms.Label();
             this.txtCofe = new System.Windows.Forms.TextBox();
             this.checkBoxCofe = new System.Windows.Forms.CheckBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelCola = new System.Windows.Forms.Panel();
             this.lblCola = new System.Windows.Forms.Label();
             this.checkBoxCola = new System.Windows.Forms.CheckBox();
             this.txtCola = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelHamburger = new System.Windows.Forms.Panel();
             this.lblHamburger = new System.Windows.Forms.Label();
             this.checkBoxHamburger = new System.Windows.Forms.CheckBox();
             this.txtHamburger = new System.Windows.Forms.TextBox();
@@ -73,10 +73,10 @@
             this.panelGasPayment.SuspendLayout();
             this.gbTotalAmount.SuspendLayout();
             this.gbMiniCafe.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelSnickers.SuspendLayout();
+            this.panelCofe.SuspendLayout();
+            this.panelCola.SuspendLayout();
+            this.panelHamburger.SuspendLayout();
             this.panelHotDog.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +133,6 @@
             this.txtByPrice.ReadOnly = true;
             this.txtByPrice.Size = new System.Drawing.Size(124, 26);
             this.txtByPrice.TabIndex = 4;
-            this.txtByPrice.Text = "0";
             this.txtByPrice.TextChanged += new System.EventHandler(this.txtGasStation_TextChanged);
             // 
             // rbByPrice
@@ -155,7 +154,6 @@
             this.txtByVolume.ReadOnly = true;
             this.txtByVolume.Size = new System.Drawing.Size(124, 26);
             this.txtByVolume.TabIndex = 4;
-            this.txtByVolume.Text = "0";
             this.txtByVolume.TextChanged += new System.EventHandler(this.txtGasStation_TextChanged);
             // 
             // rbByVolume
@@ -252,10 +250,10 @@
             this.gbMiniCafe.Controls.Add(this.lblPAmount);
             this.gbMiniCafe.Controls.Add(this.lblPPrice);
             this.gbMiniCafe.Controls.Add(this.lblProduct);
-            this.gbMiniCafe.Controls.Add(this.panel6);
-            this.gbMiniCafe.Controls.Add(this.panel5);
-            this.gbMiniCafe.Controls.Add(this.panel4);
-            this.gbMiniCafe.Controls.Add(this.panel3);
+            this.gbMiniCafe.Controls.Add(this.panelSnickers);
+            this.gbMiniCafe.Controls.Add(this.panelCofe);
+            this.gbMiniCafe.Controls.Add(this.panelCola);
+            this.gbMiniCafe.Controls.Add(this.panelHamburger);
             this.gbMiniCafe.Controls.Add(this.panelHotDog);
             this.gbMiniCafe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gbMiniCafe.Location = new System.Drawing.Point(269, 12);
@@ -310,16 +308,16 @@
             this.lblProduct.TabIndex = 1;
             this.lblProduct.Text = "Product";
             // 
-            // panel6
+            // panelSnickers
             // 
-            this.panel6.AutoSize = true;
-            this.panel6.Controls.Add(this.txtSnickers);
-            this.panel6.Controls.Add(this.lblSnickers);
-            this.panel6.Controls.Add(this.checkBoxSnickers);
-            this.panel6.Location = new System.Drawing.Point(3, 185);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(247, 29);
-            this.panel6.TabIndex = 0;
+            this.panelSnickers.AutoSize = true;
+            this.panelSnickers.Controls.Add(this.txtSnickers);
+            this.panelSnickers.Controls.Add(this.lblSnickers);
+            this.panelSnickers.Controls.Add(this.checkBoxSnickers);
+            this.panelSnickers.Location = new System.Drawing.Point(3, 188);
+            this.panelSnickers.Name = "panelSnickers";
+            this.panelSnickers.Size = new System.Drawing.Size(247, 29);
+            this.panelSnickers.TabIndex = 0;
             // 
             // txtSnickers
             // 
@@ -351,16 +349,16 @@
             this.checkBoxSnickers.UseVisualStyleBackColor = true;
             this.checkBoxSnickers.CheckedChanged += new System.EventHandler(this.checkBoxMiniCafe_CheckedChanged);
             // 
-            // panel5
+            // panelCofe
             // 
-            this.panel5.AutoSize = true;
-            this.panel5.Controls.Add(this.lblCofe);
-            this.panel5.Controls.Add(this.txtCofe);
-            this.panel5.Controls.Add(this.checkBoxCofe);
-            this.panel5.Location = new System.Drawing.Point(3, 153);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(247, 29);
-            this.panel5.TabIndex = 0;
+            this.panelCofe.AutoSize = true;
+            this.panelCofe.Controls.Add(this.lblCofe);
+            this.panelCofe.Controls.Add(this.txtCofe);
+            this.panelCofe.Controls.Add(this.checkBoxCofe);
+            this.panelCofe.Location = new System.Drawing.Point(3, 153);
+            this.panelCofe.Name = "panelCofe";
+            this.panelCofe.Size = new System.Drawing.Size(247, 29);
+            this.panelCofe.TabIndex = 0;
             // 
             // lblCofe
             // 
@@ -392,16 +390,16 @@
             this.checkBoxCofe.UseVisualStyleBackColor = true;
             this.checkBoxCofe.CheckedChanged += new System.EventHandler(this.checkBoxMiniCafe_CheckedChanged);
             // 
-            // panel4
+            // panelCola
             // 
-            this.panel4.AutoSize = true;
-            this.panel4.Controls.Add(this.lblCola);
-            this.panel4.Controls.Add(this.checkBoxCola);
-            this.panel4.Controls.Add(this.txtCola);
-            this.panel4.Location = new System.Drawing.Point(3, 118);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(247, 29);
-            this.panel4.TabIndex = 0;
+            this.panelCola.AutoSize = true;
+            this.panelCola.Controls.Add(this.lblCola);
+            this.panelCola.Controls.Add(this.checkBoxCola);
+            this.panelCola.Controls.Add(this.txtCola);
+            this.panelCola.Location = new System.Drawing.Point(3, 118);
+            this.panelCola.Name = "panelCola";
+            this.panelCola.Size = new System.Drawing.Size(247, 29);
+            this.panelCola.TabIndex = 0;
             // 
             // lblCola
             // 
@@ -434,16 +432,16 @@
             this.txtCola.Text = "0";
             this.txtCola.TextChanged += new System.EventHandler(this.txtMiniCafe_TextChanged);
             // 
-            // panel3
+            // panelHamburger
             // 
-            this.panel3.AutoSize = true;
-            this.panel3.Controls.Add(this.lblHamburger);
-            this.panel3.Controls.Add(this.checkBoxHamburger);
-            this.panel3.Controls.Add(this.txtHamburger);
-            this.panel3.Location = new System.Drawing.Point(3, 83);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 29);
-            this.panel3.TabIndex = 0;
+            this.panelHamburger.AutoSize = true;
+            this.panelHamburger.Controls.Add(this.lblHamburger);
+            this.panelHamburger.Controls.Add(this.checkBoxHamburger);
+            this.panelHamburger.Controls.Add(this.txtHamburger);
+            this.panelHamburger.Location = new System.Drawing.Point(3, 83);
+            this.panelHamburger.Name = "panelHamburger";
+            this.panelHamburger.Size = new System.Drawing.Size(247, 29);
+            this.panelHamburger.TabIndex = 0;
             // 
             // lblHamburger
             // 
@@ -534,14 +532,14 @@
             this.gbTotalAmount.PerformLayout();
             this.gbMiniCafe.ResumeLayout(false);
             this.gbMiniCafe.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelSnickers.ResumeLayout(false);
+            this.panelSnickers.PerformLayout();
+            this.panelCofe.ResumeLayout(false);
+            this.panelCofe.PerformLayout();
+            this.panelCola.ResumeLayout(false);
+            this.panelCola.PerformLayout();
+            this.panelHamburger.ResumeLayout(false);
+            this.panelHamburger.PerformLayout();
             this.panelHotDog.ResumeLayout(false);
             this.panelHotDog.PerformLayout();
             this.ResumeLayout(false);
@@ -565,19 +563,19 @@
         private GroupBox gbTotalAmount;
         private Label lblTotalAmount;
         private GroupBox gbMiniCafe;
-        private Panel panel6;
+        private Panel panelSnickers;
         private TextBox txtSnickers;
         private Label lblSnickers;
         private CheckBox checkBoxSnickers;
-        private Panel panel5;
+        private Panel panelCofe;
         private TextBox txtCofe;
         private Label lblCofe;
         private CheckBox checkBoxCofe;
-        private Panel panel4;
+        private Panel panelCola;
         private TextBox txtCola;
         private Label lblCola;
         private CheckBox checkBoxCola;
-        private Panel panel3;
+        private Panel panelHamburger;
         private TextBox txtHamburger;
         private Label lblHamburger;
         private CheckBox checkBoxHamburger;
